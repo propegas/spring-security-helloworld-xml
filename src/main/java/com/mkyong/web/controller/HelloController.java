@@ -90,7 +90,7 @@ public class HelloController {
 	    	Collection<? extends GrantedAuthority> authorities = auth.getAuthorities();
 	    	for (GrantedAuthority authority : authorities) {
 	    		//GrantedAuthority authority;
-				roles = (String[]) ArrayUtils.add(roles, authority.getAuthority());
+				roles = (String[]) ArrayUtils.add(roles, "\"" + authority.getAuthority() + "\"");
 				resroles = Arrays.toString(roles);
 	    	}
 	    	//roles = roles + "]";

@@ -6,12 +6,12 @@
 <c:when test="${pageContext.request.userPrincipal.authenticated}">
 "login": "true',
 "user": "${pageContext.request.userPrincipal.name}", 
-"role": "${roles}"
+"role": ${roles}
 </c:when>
 <c:otherwise>
 "login": "false",
 "user": "",
-"role": ""
+"role": [""]
 </c:otherwise>
 </c:choose>
 }
